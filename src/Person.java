@@ -4,7 +4,7 @@ public class Person {
     private int age;
     private String pesel;
 
-    public Person(String firstName, String lastName, int age, String pesel) {
+    public Person(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException{
 
         if (firstName == null || lastName == null || firstName.length() <2 || lastName.length() <2){
             throw new NameUndefinedException("Imię lub nazwisko jest nullem lub ma mniej niż 2 znaki");
